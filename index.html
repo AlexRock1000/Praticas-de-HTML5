@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pratica</title>
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <script>
+        function alterar() {
+            document.getElementById("icone").src = "imagens/CSS-Logo.png";
+        }
+        function voltar() {
+            document.getElementById("icone").src = "imagens/Adobe Express - file.png";
+        }
+        function mudaImagemCabeçalho() {
+            document.getElementById("imagemIlustratica").src = "imagens/html5-web-applications.png";
+        }
+    </script>
 </head>
 <body>
     <div id="interface">
@@ -14,7 +25,7 @@
                 <h2>Prática de HTML5</h2>
             </hgroup>
             
-            <img id="icone" src="imagens/Adobe Express - file.png">
+            <img src="imagens/Adobe Express - file.png" id="icone" onmouseover="alterar()" onmouseout="voltar()">
             <nav id="menu">
             <h1>Menu Principal</h1>
                 <ul>
@@ -39,7 +50,7 @@
             <h1>O que é HTML5?</h1>
                 <p><b>HTML5 é a quinta versão do HTML</b>, a linguagem de marcação padrão para a criação de páginas <i>web</i>. Ele introduz novos elementos e atributos que permitem uma melhor estruturação do conteúdo, suporte a multimídia, gráficos vetoriais e muito mais. Com o <a href="https://www.html5.com.br/guia/introducao-ao-html-5" target="_blank"><b>HTML5</b></a>, os desenvolvedores podem criar experiências web mais ricas e interativas, aproveitando recursos como <i>áudio, vídeo, canvas e geolocalização</i>.</p>
             <figure class="foto-legenda" width="400" height="300">
-                <img src="imagens/html5.avif">
+                <img src="imagens/html5.avif" id="imagemIlustratica" onclick="mudaImagemCabeçalho()">
                 <figcaption>
                     <h1>Imagem ilustrativa HTML5</h1>
                 </figcaption>
