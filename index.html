@@ -13,7 +13,16 @@
             document.getElementById("icone").src = "imagens/Adobe Express - file.png";
         }
         function mudaImagemCabeçalho() {
-            document.getElementById("imagemIlustratica").src = "imagens/html5-web-applications.jpg";
+            var imagem = document.getElementById("imagemIlustrativa");
+            var atual = imagem.src;
+            if (atual.indexOf("html5.avif") !== -1) {
+                imagem.src = "imagens/html5-web-applications.jpg";
+            } else {
+                imagem.src = "imagens/html5.avif";
+            }
+        }
+        function voltarImagemCabeçalho() {
+            document.getElementById("imagemIlustrativa").src = "imagens/html5.avif";
         }
     </script>
 </head>
@@ -48,11 +57,11 @@
                 </header>
 
             <h1>O que é HTML5?</h1>
-                <p><b>HTML5 é a quinta versão do HTML</b>, a linguagem de marcação padrão para a criação de páginas <i>web</i>. Ele introduz novos elementos e atributos que permitem uma melhor estruturação do conteúdo, suporte a multimídia, gráficos vetoriais e muito mais. Com o <a href="https://www.html5.com.br/guia/introducao-ao-html-5" target="_blank"><b>HTML5</b></a>, os desenvolvedores podem criar experiências web mais ricas e interativas, aproveitando recursos como <i>áudio, vídeo, canvas e geolocalização</i>.</p>
             <figure class="foto-legenda" width="400" height="300">
-                <img src="imagens/html5.avif" id="imagemIlustratica" onclick="mudaImagemCabeçalho()">
+                <img src="imagens/html5.avif" id="imagemIlustrativa" onclick="mudaImagemCabeçalho()">
                 <figcaption>
                     <h1>Imagem ilustrativa HTML5</h1>
+                    <p><b>HTML5 é a quinta versão do HTML</b>, a linguagem de marcação padrão para a criação de páginas <i>web</i>. Ele introduz novos elementos e atributos que permitem uma melhor estruturação do conteúdo, suporte a multimídia, gráficos vetoriais e muito mais. Com o <a href="https://www.html5.com.br/guia/introducao-ao-html-5" target="_blank"><b>HTML5</b></a>, os desenvolvedores podem criar experiências web mais ricas e interativas, aproveitando recursos como <i>áudio, vídeo, canvas e geolocalização</i>.</p>
                 </figcaption>
             </figure>
 
