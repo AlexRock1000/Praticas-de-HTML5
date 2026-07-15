@@ -180,6 +180,7 @@ figure.foto-legenda figcaption {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    pointer-events: none; /* permite que cliques atinjam a imagem abaixo */
 }
 
 figure.foto-legenda figcaption h1 {
@@ -203,6 +204,16 @@ figure.foto-legenda figcaption p {
     text-align: center; /* centraliza o parágrafo horizontalmente */
     font-size: 1rem;
     color: white; /* garante visibilidade sobre o fundo */
+}
+
+figure.foto-legenda figcaption a {
+    pointer-events: auto; /* mantém links dentro da legenda clicáveis */
+    color: #2c8bdf;
+    text-decoration: underline;
+}
+
+figure.foto-legenda img {
+    cursor: pointer;
 }
 
 figure.foto-legenda:hover figcaption {
