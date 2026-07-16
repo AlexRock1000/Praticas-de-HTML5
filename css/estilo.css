@@ -31,7 +31,7 @@ header#cabeçalho img:not(#icone) {
 
 header#cabeçalho img#icone {
     position: absolute;
-    top: 43px;
+    top: 60px;
     left: 980px;
     width: 350px;
     height: auto;

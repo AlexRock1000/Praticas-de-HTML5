@@ -5,35 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pratica</title>
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
-    <script>
-        function alterarIcone(tipo) {
-            if (tipo == 1) {
-                arquivo = "imagens/CSS-Logo.png";
-            }
-            if (tipo == 2) {
-                arquivo = "imagens/Adobe Express - file.png";
-            }
-            if (tipo == 3) {
-                arquivo = "imagens/home-PNG.png";
-            }
-            if (tipo == 4) {
-                arquivo = "imagens/engrenagem-PNG.png";
-            }
-            if (tipo == 5) {
-                arquivo = "imagens/suporte-PNG.png";
-            }
-            document.getElementById("icone").src = arquivo;
-        }
-        function mudaImagem() {
-            var imagem = document.getElementById("imagemIlustrativa");
-            var atual = imagem.src;
-            if (atual.indexOf("html5.avif") !== -1) {
-                imagem.src = "imagens/html5-web-applications.jpg";
-            } else {
-                imagem.src = "imagens/html5.avif";
-            }
-        }
-    </script>
+    <script src="JavaScript/funçoes.js"></script>
 </head>
 <body>
     <div id="interface">
@@ -43,13 +15,13 @@
                 <h2>Prática de HTML5</h2>
             </hgroup>
             
-            <img src="imagens/Adobe Express - file.png" id="icone" onmouseover="alterarIcone(1)" onmouseout="alterarIcone(2)">
+            <img src="imagens/icone-html5.png" id="icone" onmouseover="alterarIcone(1)" onmouseout="alterarIcone(2)">
             <nav id="menu">
             <h1>Menu Principal</h1>
                 <ul>
-                    <li onmouseout="alterarIcone(3)"><a href="index.html">Home</a></li>
-                    <li onmouseout="alterarIcone(4)"><a href="configuracoes.html">Configurações</a></li>
-                    <li onmouseout="alterarIcone(5)"><a href="suporte.html">Suporte</a></li>
+                    <li onmouseover="alterarIcone(3)" onmouseout="alterarIcone(2)"><a href="index.html">Home</a></li>
+                    <li onmouseover="alterarIcone(4)" onmouseout="alterarIcone(2)"><a href="configuracoes.html">Configurações</a></li>
+                    <li onmouseover="alterarIcone(5)" onmouseout="alterarIcone(2)"><a href="suporte.html">Suporte</a></li>
                 </ul>
             </nav>
         </header>
