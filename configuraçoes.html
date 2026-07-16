@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
     <script src="JavaScript/funçoes.js"></script>
 </head>
-<body>
+<body class="sem-borda-lateral">
     <div id="interface">
         <header id="cabeçalho">
             <hgroup>
@@ -15,13 +15,13 @@
                 <h2>Prática de HTML5</h2>
             </hgroup>
             
-            <img src="imagens/icone-html5.png" id="icone" onmouseover="alterarIcone(1)" onmouseout="alterarIcone(2)">
+            <img src="imagens/engrenagem.png" id="icone" onmouseover="alterarIcone(2)" onmouseout="alterarIcone(4)">
             <nav id="menu">
             <h1>Menu Principal</h1>
                 <ul>
-                    <li onmouseover="alterarIcone(3)" onmouseout="alterarIcone(2)"><a href="index.html">Home</a></li>
-                    <li onmouseover="alterarIcone(4)" onmouseout="alterarIcone(2)"><a href="configuracoes.html">Configurações</a></li>
-                    <li onmouseover="alterarIcone(5)" onmouseout="alterarIcone(2)"><a href="suporte.html">Suporte</a></li>
+                    <li onmouseover="alterarIcone(3)" onmouseout="alterarIcone(4)"><a href="index.html">Home</a></li>
+                    <li onmouseover="alterarIcone(4)" onmouseout="alterarIcone(4)"><a href="configuraçoes.html">Configurações</a></li>
+                    <li onmouseover="alterarIcone(5)" onmouseout="alterarIcone(4)"><a href="suporte.html">Suporte</a></li>
                 </ul>
             </nav>
         </header>
@@ -29,22 +29,28 @@
         <section id="conteudo">
             <article id="principal">
                 <header id="cabeçalho-conteudo">
-                <h1>Bem-vindo ao meu site!</h1>
+                <h1>Bem-vindo as Configurações!</h1>
                     <p>Este é um site de prática de HTML5, onde você pode aprender e experimentar com diferentes elementos e recursos da linguagem.</p>
                 <hgroup>
-                    <h2>Aprendendo HTML5</h2>
                     <h3>Feito por Davi Alexandre</h3>
                 </hgroup>
                 </header>
 
-            <h1>O que é HTML5?</h1>
-            <figure class="foto-legenda" width="400" height="300">
-                <img src="imagens/html5.avif" id="imagemIlustrativa" onclick="mudaImagem()">
-                <figcaption>
-                    <h1>Imagem ilustrativa HTML5</h1>
-                    <p><b>HTML5 é a quinta versão do HTML</b>, a linguagem de marcação padrão para a criação de páginas <i>web</i>. Ele introduz novos elementos e atributos que permitem uma melhor estruturação do conteúdo, suporte a multimídia, gráficos vetoriais e muito mais. Com o <a href="https://www.html5.com.br/guia/introducao-ao-html-5" target="_blank"><b>HTML5</b></a>, os desenvolvedores podem criar experiências web mais ricas e interativas, aproveitando recursos como <i>áudio, vídeo, canvas e geolocalização</i>.</p>
-                </figcaption>
-            </figure>
+                <h1>Configurações</h1>
+                <figure class="foto-legenda" width="400" height="300">
+                    <img src="imagens/config-img.webp" id="imagemIlustrativa" onclick="mudaImagemConfig()">
+                    <figcaption>
+                        <h1>Imagem ilustrativa configuração</h1>
+                        <p>Aqui é a pagina de configurações. Nela você pode alterar as coisas.</p>
+                        <div class="grupo-botoes">
+                            <button type="button">Privacidade</button>
+                            <button type="button">Modo escuro</button>
+                            <button type="button">Acessibilidade</button>
+                        </div>
+                    </figcaption>
+                </figure>
+            </article>
+        </section>
 
         <footer id="rodape">
             <p>Copyright &copy; 2026 - by Davi Alexandre<br>

@@ -73,6 +73,8 @@ header#cabeçalho {
     background-size: cover; /* cobre toda a área do cabeçalho */
 }
 
+/*Formatação corpo*/
+
 article#principal h1 {
     font-family: "Montenegrin Gothic One", sans-serif;
     font-size: 25pt;
@@ -227,6 +229,37 @@ figure.foto-legenda:hover figcaption h1 {
     margin-bottom: 12px; /* Adiciona o espaçamento abaixo dele */
 }
 
+figure.foto-legenda figcaption .grupo-botoes {
+    display: flex;
+    text-transform: uppercase;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    position: relative;
+    z-index: 2;
+    pointer-events: auto;
+}
+
+figure.foto-legenda figcaption button {
+    background-color: rgb(147, 160, 150);
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+    pointer-events: auto;
+}
+
+figure.foto-legenda figcaption button:hover {
+    background-color: rgb(90, 100, 93);
+    filter: brightness(0.8);
+    transform: scale(1.03);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
 /* Formatação de Menu */
 
 nav#menu {
@@ -271,6 +304,10 @@ section#conteudo {
     float: left;
     border-right: 8px solid rgb(196, 204, 197);
     padding-right: 30px;
+}
+
+body.sem-borda-lateral section#conteudo {
+    border-right: none;
 }
 
 /* Formatação de Lateral */
