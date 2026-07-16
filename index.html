@@ -6,13 +6,25 @@
     <title>Pratica</title>
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
     <script>
-        function alterar() {
-            document.getElementById("icone").src = "imagens/CSS-Logo.png";
+        function alterarIcone(tipo) {
+            if (tipo == 1) {
+                arquivo = "imagens/CSS-Logo.png";
+            }
+            if (tipo == 2) {
+                arquivo = "imagens/Adobe Express - file.png";
+            }
+            if (tipo == 3) {
+                arquivo = "imagens/home-PNG.png";
+            }
+            if (tipo == 4) {
+                arquivo = "imagens/engrenagem-PNG.png";
+            }
+            if (tipo == 5) {
+                arquivo = "imagens/suporte-PNG.png";
+            }
+            document.getElementById("icone").src = arquivo;
         }
-        function voltar() {
-            document.getElementById("icone").src = "imagens/Adobe Express - file.png";
-        }
-        function mudaImagemCabeçalho() {
+        function mudaImagem() {
             var imagem = document.getElementById("imagemIlustrativa");
             var atual = imagem.src;
             if (atual.indexOf("html5.avif") !== -1) {
@@ -20,9 +32,6 @@
             } else {
                 imagem.src = "imagens/html5.avif";
             }
-        }
-        function voltarImagemCabeçalho() {
-            document.getElementById("imagemIlustrativa").src = "imagens/html5.avif";
         }
     </script>
 </head>
@@ -34,13 +43,13 @@
                 <h2>Prática de HTML5</h2>
             </hgroup>
             
-            <img src="imagens/Adobe Express - file.png" id="icone" onmouseover="alterar()" onmouseout="voltar()">
+            <img src="imagens/Adobe Express - file.png" id="icone" onmouseover="alterarIcone(1)" onmouseout="alterarIcone(2)">
             <nav id="menu">
             <h1>Menu Principal</h1>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="configuracoes.html">Configurações</a></li>
-                    <li><a href="suporte.html">Suporte</a></li>
+                    <li onmouseout="alterarIcone(3)"><a href="index.html">Home</a></li>
+                    <li onmouseout="alterarIcone(4)"><a href="configuracoes.html">Configurações</a></li>
+                    <li onmouseout="alterarIcone(5)"><a href="suporte.html">Suporte</a></li>
                 </ul>
             </nav>
         </header>
@@ -58,7 +67,7 @@
 
             <h1>O que é HTML5?</h1>
             <figure class="foto-legenda" width="400" height="300">
-                <img src="imagens/html5.avif" id="imagemIlustrativa" onclick="mudaImagemCabeçalho()">
+                <img src="imagens/html5.avif" id="imagemIlustrativa" onclick="mudaImagem()">
                 <figcaption>
                     <h1>Imagem ilustrativa HTML5</h1>
                     <p><b>HTML5 é a quinta versão do HTML</b>, a linguagem de marcação padrão para a criação de páginas <i>web</i>. Ele introduz novos elementos e atributos que permitem uma melhor estruturação do conteúdo, suporte a multimídia, gráficos vetoriais e muito mais. Com o <a href="https://www.html5.com.br/guia/introducao-ao-html-5" target="_blank"><b>HTML5</b></a>, os desenvolvedores podem criar experiências web mais ricas e interativas, aproveitando recursos como <i>áudio, vídeo, canvas e geolocalização</i>.</p>
