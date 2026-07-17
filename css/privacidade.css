@@ -1,8 +1,38 @@
 @charset "UTF-8";
 
 section#privacidade {
-    width: 1000px;
+    max-width: 1000px;
     margin: auto;
+}
+
+.imagem-privacidade {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+.imagem-privacidade img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.imagem-privacidade p {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 20px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
 }
 
 iframe#frame-privac {
@@ -18,48 +48,54 @@ iframe#frame-privac::-webkit-scrollbar {
 
 /* Fundo escuro que cobre a tela inteira */
 .janela-modal {
-    display: none; 
-    position: absolute; 
-    z-index: 99; 
-    left: 50%;
-    top: 60%;
-    transform: translate(-50%, -50%);
-    width: 400px; 
-    height: 200px; 
-    background-color: rgba(0, 0, 0, 0.7); 
+    display: none;
+    position: fixed;
+    z-index: 999;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
 /* Caixa branca centralizada (Janela Pequena) */
 .conteudo-modal {
     background-color: #fff;
-    margin: 10% auto; 
+    width: min(95vw, 1000px);
+    height: min(90vh, 720px);
     padding: 20px;
-    border-radius: 8px;
-    width: 100%;
-    height: 100%;
+    border-radius: 12px;
     position: relative;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    box-sizing: border-box; /* Garante que o padding não quebre o tamanho */
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 /* O iframe ocupando o espaço de dentro da caixinha */
 .conteudo-modal iframe {
     width: 100%;
-    height: 100%;
+    height: calc(100% - 40px);
     border: none;
+    display: block;
 }
 
 /* Botão "X" para fechar */
 .botao-fechar {
     position: absolute;
-    right: 15px;
-    top: 5px;
-    color: #000;
+    right: 16px;
+    top: 16px;
+    color: #333;
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
     z-index: 100;
 }
 .botao-fechar:hover {
-    color: red;
+    color: #c00;
+}
+
+/* Mensagem de fundo do iframe caso o conteúdo seja maior */
+iframe {
+    min-height: 100%;
 }
