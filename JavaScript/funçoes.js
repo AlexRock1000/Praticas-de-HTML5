@@ -46,3 +46,11 @@ function mudaImagemSuporte() {
         imagem.src = "imagens/suporte-img.jpg";
     }
 }
+
+function abrirJanelaPrivacidade() {
+    document.getElementById("modalPrivacidade").style.display = "block";
+}
+
+function fecharJanelaPrivacidade() {
+    document.getElementById("modalPrivacidade").style.display = "none";
+}

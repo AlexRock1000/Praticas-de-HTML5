@@ -116,17 +116,47 @@ figure.foto-legenda figcaption {
     top: 0;
     bottom: 0; /* Fixa a legenda na base da imagem */
     left: 0;
+    z-index: 2;
     height: 100%;
     color: white;
     width: 100%;
-    padding: 0 20px;
+    padding: 20px;
     box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.55);
     transition: background-color 0.4s;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    pointer-events: none; /* permite que cliques atinjam a imagem abaixo */
+    align-items: center;
+    pointer-events: auto;
+}
+
+figure.foto-legenda figcaption .grupo-botoes {
+    display: flex;
+    text-transform: uppercase;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    position: relative;
+    z-index: 3;
+    pointer-events: auto;
+    background: rgba(0, 0, 0, 0.35);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+figure.foto-legenda figcaption button {
+    background-color: rgb(147, 160, 150);
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+    pointer-events: auto;
+    z-index: 3;
 }
 
 figure.foto-legenda figcaption h1 {
@@ -152,7 +182,7 @@ section#conteudo {
 }
 
 section#imagem-ilus {
-    
+
 }
 
 body.sem-borda-lateral section#conteudo {

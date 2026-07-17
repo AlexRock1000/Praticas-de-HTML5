@@ -15,3 +15,51 @@ iframe#frame-privac {
 iframe#frame-privac::-webkit-scrollbar {
     display: none;
 }
+
+/* Fundo escuro que cobre a tela inteira */
+.janela-modal {
+    display: none; 
+    position: absolute; 
+    z-index: 99; 
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    width: 400px; 
+    height: 200px; 
+    background-color: rgba(0, 0, 0, 0.7); 
+}
+
+/* Caixa branca centralizada (Janela Pequena) */
+.conteudo-modal {
+    background-color: #fff;
+    margin: 10% auto; 
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    box-sizing: border-box; /* Garante que o padding não quebre o tamanho */
+}
+
+/* O iframe ocupando o espaço de dentro da caixinha */
+.conteudo-modal iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Botão "X" para fechar */
+.botao-fechar {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    color: #000;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 100;
+}
+.botao-fechar:hover {
+    color: red;
+}
