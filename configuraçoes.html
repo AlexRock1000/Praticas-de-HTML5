@@ -30,27 +30,34 @@
         <section id="conteudo">
             <article id="principal">
                 <header id="cabeçalho-conteudo">
-                <h1>Bem-vindo as Configurações!</h1>
-                    <p>Este é um site de prática de HTML5, onde você pode aprender e experimentar com diferentes elementos e recursos da linguagem.</p>
-                <hgroup>
-                    <h3>Feito por Davi Alexandre</h3>
-                </hgroup>
+                    <h1>Bem-vindo as Configurações!</h1>
+                        <p>Este é um site de prática de HTML5, onde você pode aprender e experimentar com diferentes elementos e recursos da linguagem.</p>
+                    <hgroup>
+                        <h3>Feito por Davi Alexandre</h3>
+                    </hgroup>
                 </header>
-
-                <h1>Configurações</h1>
-                <figure class="foto-legenda" width="400" height="300">
-                    <img src="imagens/config-img.webp" id="imagemIlustrativa" onclick="mudaImagemConfig()">
-                    <figcaption>
-                        <h1>Imagem ilustrativa configuração</h1>
-                        <p>Aqui é a pagina de configurações. Nela você pode alterar as coisas.</p>
-                        <div class="grupo-botoes">
-                            <button type="button">Privacidade</button>
-                            <button type="button">Modo escuro</button>
-                            <button type="button">Acessibilidade</button>
-                        </div>
-                    </figcaption>
-                </figure>
+                    <h1>Configurações</h1>
             </article>
+        </section>
+
+        <section id="imagem-ilus">
+            <figure class="foto-legenda" width="400" height="300">
+                <img src="imagens/config-img.webp" id="imagemIlustrativa" onclick="mudaImagemConfig()">
+                <figcaption>
+                    <h1>Imagem ilustrativa configuração</h1>
+                        <p>Aqui é a pagina de configurações. Nela você pode alterar as coisas.</p>
+
+                    <div class="grupo-botoes">
+                        <button type="button"><a href="privacidade.html">Privacidade</a></button>
+                        <button type="button">Modo escuro</button>
+                        <button type="button">Idioma e região</button>
+                    </div>
+                </figcaption>
+            </figure>
+        </section>
+
+        <section id="privacidade">
+            <iframe src="privacidade.html" name="janela" id="frame-privac"></iframe>
         </section>
 
         <footer id="rodape">

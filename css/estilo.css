@@ -101,6 +101,7 @@ figure.foto-legenda {
     border: 1px solid rgb(15, 56, 24);
     box-shadow: 1px 1px 10px black;
     overflow: hidden;
+    margin: 30px auto;
 }
 
 figure.foto-legenda img {
@@ -150,6 +151,10 @@ section#conteudo {
     padding-right: 30px;
 }
 
+section#imagem-ilus {
+    
+}
+
 body.sem-borda-lateral section#conteudo {
     width: 100%;
     float: none;
@@ -169,7 +174,7 @@ figure.foto-legenda figcaption p {
 
 figure.foto-legenda figcaption a {
     pointer-events: auto; /* mantém links dentro da legenda clicáveis */
-    color: #2c8bdf;
+    color: #e9eef3;
     text-decoration: underline;
 }
 
