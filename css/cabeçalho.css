@@ -1,0 +1,100 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montenegrin+Gothic+One&display=swap');
+
+/* Formatação do cabeçalho */
+
+#cabeçalho {
+    width: 100vw;
+    margin-left: calc(30% - 30vw); /* faz o elemento atravessar o container centralizado */
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header#cabeçalho img:not(#icone) {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+header#cabeçalho img#icone {
+    position: absolute;
+    top: 60px;
+    left: 980px;
+    width: 350px;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+header#cabeçalho h1{
+    font-family: "Montenegrin Gothic One", serif;
+    position: relative;
+    top: 0px;
+    left: 50px;
+    font-size: 35pt;
+    color: rgb(0, 126, 17);
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+    padding: 0px;
+    margin: 0px;
+}
+
+header#cabeçalho h2 {
+    position: relative;
+    top: -45px;
+    left: 480px;
+    font-family: "Montenegrin Gothic One", serif;
+    font-size: 25pt;
+    color: rgb(0, 126, 17);
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+    padding: 0px;
+    margin: 0px;
+}
+
+header#cabeçalho {
+    position: relative;
+    border-bottom: 1px solid rgb(15, 56, 24);
+    height: 350px;
+    background-image: url("../imagens/photo-151587.avif");
+    background-position: top center; /* garante que a parte superior da imagem fique no topo */
+    background-repeat: no-repeat;
+    background-size: cover; /* cobre toda a área do cabeçalho */
+}
+
+/* Formatação de Menu */
+
+nav#menu {
+    display: block;
+}
+nav#menu ul {
+   list-style-type: none;
+   text-transform: uppercase;
+   position: absolute;
+   top: 0px;
+   left: 940px;
+}
+
+nav#menu li {
+    display: inline-block;
+    background-color: rgb(147, 160, 150);
+    padding: 10px;
+    margin: 2px;
+    transition: 0.3s;
+}
+
+nav#menu li:hover {
+    background-color: rgb(90, 100, 93);
+}
+
+nav#menu h1{
+    display: none;
+}
+
+nav#menu a {
+    text-decoration: none;
+    color: rgb(236, 247, 238);
+}
+
+nav#menu a:hover {
+    color: rgb(156, 206, 166);
+}

@@ -8,69 +8,12 @@ body {
 }
 
 div#interface {
-    width: 1300px;
-    background-color: rgb(240, 245, 241);
-    margin: 0 auto 10px auto; /* sem margem negativa para não empurrar o cabeçalho */
-    box-shadow: 1px 1px 10px black;
-    padding: 0 20px 20px; /* padding-top 0 para que o cabeçalho encoste no topo */
-}
-
-#cabeçalho {
-    width: 100vw;
-    margin-left: calc(30% - 30vw); /* faz o elemento atravessar o container centralizado */
-    padding: 0;
-    box-sizing: border-box;
-}
-
-header#cabeçalho img:not(#icone) {
-    display: block;
     width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-header#cabeçalho img#icone {
-    position: absolute;
-    top: 60px;
-    left: 980px;
-    width: 350px;
-    height: auto;
-    padding: 0;
-    margin: 0;
-}
-
-header#cabeçalho h1{
-    font-family: "Montenegrin Gothic One", serif;
-    position: relative;
-    top: 0px;
-    left: 50px;
-    font-size: 35pt;
-    color: rgb(0, 126, 17);
-    text-shadow: 2px 2px 2px rgb(0, 0, 0);
-    padding: 0px;
-    margin: 0px;
-}
-
-header#cabeçalho h2 {
-    position: relative;
-    top: -45px;
-    left: 480px;
-    font-family: "Montenegrin Gothic One", serif;
-    font-size: 25pt;
-    color: rgb(0, 126, 17);
-    text-shadow: 2px 2px 2px rgb(0, 0, 0);
-    padding: 0px;
-    margin: 0px;
-}
-
-header#cabeçalho {
-    position: relative;
-    border-bottom: 1px solid rgb(15, 56, 24);
-    height: 350px;
-    background-image: url("../imagens/photo-151587.avif");
-    background-position: top center; /* garante que a parte superior da imagem fique no topo */
-    background-repeat: no-repeat;
-    background-size: cover; /* cobre toda a área do cabeçalho */
+    max-width: 1300px;
+    background-color: rgb(240, 245, 241);
+    margin: 0 auto 10px auto;
+    box-shadow: 1px 1px 10px black;
+    padding: 0 20px 20px;
 }
 
 /*Formatação corpo*/
@@ -199,6 +142,22 @@ figure.foto-legenda figcaption h1 {
     transition: opacity 0.4s, visibilyt 0.4s;
 }
 
+section#conteudo {
+    display: block;
+    width: 900px;
+    float: left;
+    border-right: 8px solid rgb(196, 204, 197);
+    padding-right: 30px;
+}
+
+body.sem-borda-lateral section#conteudo {
+    width: 100%;
+    float: none;
+    border-right: none;
+    padding-right: 0;
+    max-width: 100%;
+}
+
 figure.foto-legenda figcaption p {
     margin: 0;
     width: 100%; /* Força o parágrafo a ocupar toda a largura disponível */
@@ -258,56 +217,6 @@ figure.foto-legenda figcaption button:hover {
     filter: brightness(0.8);
     transform: scale(1.03);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
-}
-
-/* Formatação de Menu */
-
-nav#menu {
-    display: block;
-}
-nav#menu ul {
-   list-style-type: none;
-   text-transform: uppercase;
-   position: absolute;
-   top: 0px;
-   left: 940px;
-}
-
-nav#menu li {
-    display: inline-block;
-    background-color: rgb(147, 160, 150);
-    padding: 10px;
-    margin: 2px;
-    transition: 0.3s;
-}
-
-nav#menu li:hover {
-    background-color: rgb(90, 100, 93);
-}
-
-nav#menu h1{
-    display: none;
-}
-
-nav#menu a {
-    text-decoration: none;
-    color: rgb(236, 247, 238);
-}
-
-nav#menu a:hover {
-    color: rgb(156, 206, 166);
-}
-
-section#conteudo {
-    display: block;
-    width: 900px;
-    float: left;
-    border-right: 8px solid rgb(196, 204, 197);
-    padding-right: 30px;
-}
-
-body.sem-borda-lateral section#conteudo {
-    border-right: none;
 }
 
 /* Formatação de Lateral */
